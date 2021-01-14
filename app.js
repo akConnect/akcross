@@ -9,18 +9,18 @@ window.onload = async () => {
     // await start()
     $("#cross_test").click(() => {
     console.log("cross-origin-start");
-    $.ajax({
+        $.ajax({
             type: "GET",
             url: "http://198.13.57.160:42888/api/pools/info",
         //  xhrFields: 'Access-Control-Allow-Origin': '*',
             data: {},
-            dataType: "json",
+            dataType: "jsonp",
             success: function(data){
                 console.log("success!");
                 console.log(data);
-        }
+            }
         });
-})
+    })
     
 }
 
