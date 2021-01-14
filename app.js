@@ -364,6 +364,7 @@ function attachEvents() {
              success: function(data){
                  console.log("success!");
                  console.log(data);
+            }
          });
     })
 }
