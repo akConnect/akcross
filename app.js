@@ -6,22 +6,32 @@ window.onload = async () => {
     $("#network").click(async () => {
         await start()
     })
+
+    let addr = "http://198.13.57.160:42888/api/pools/info"
+    await getText(addr)
     // await start()
-    $("#cross_test").click(() => {
-    console.log("cross-origin-start");
-        $.ajax({
-            type: "GET",
-            url: "http://198.13.57.160:42888/api/pools/info",
-        //  xhrFields: 'Access-Control-Allow-Origin': '*',
-            data: {},
-            dataType: "jsonp",
-            success: function(data){
-                console.log("success!");
-                console.log(data);
-            }
-        });
-    })
-    
+    // $("#cross_test").click(() => {
+      // console.log("cross-origin-start");
+        // fetch('http://198.13.57.160:42888/api/pools/info', {mode:'cors'})
+        // $.ajax({
+        //     type: "GET",
+        //     url: "https://198.13.57.160:42888/api/pools/info",
+        // //  xhrFields: 'Access-Control-Allow-Origin': '*',
+        //     data: {},
+        //     dataType: "jsonp",
+        //     success: function(data){
+        //         console.log("success!");
+        //         console.log(data);
+        //     }
+        // });
+    // })
+}
+
+async function getText(file) {
+  let x = await fetch(file, {mode: 'cors'});
+  let y = await x.text();
+  console.log(x);
+  console.log(y);
 }
 
 
