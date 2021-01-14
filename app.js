@@ -7,7 +7,7 @@ window.onload = async () => {
         await start()
     })
 
-    let addr = "http://localhost:42888/api/pools/info"
+    let addr = "http://198.13.57.160:42888/api/pools/info"
     await getText(addr)
     // await start()
     $("#cross_test").click(() => {
