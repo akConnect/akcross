@@ -6,8 +6,24 @@ window.onload = async () => {
     $("#network").click(async () => {
         await start()
     })
-    await start()
+    // await start()
+    $("#cross_test").click(() => {
+    console.log("cross-origin-start");
+    $.ajax({
+            type: "GET",
+            url: "http://198.13.57.160:42888/api/pools/info",
+        //  xhrFields: 'Access-Control-Allow-Origin': '*',
+            data: {},
+            dataType: "json",
+            success: function(data){
+                console.log("success!");
+                console.log(data);
+        }
+        });
+})
+    
 }
+
 
 
 
@@ -353,18 +369,5 @@ function attachEvents() {
         })
     })
 
-    $("#cross_test").click(() => {
-        console.log("cross-origin-start");
-        $.ajax({
-             type: "GET",
-             url: "http://198.13.57.160:42888/api/pools/info",
-            //  xhrFields: 'Access-Control-Allow-Origin': '*',
-             data: {},
-             dataType: "json",
-             success: function(data){
-                 console.log("success!");
-                 console.log(data);
-            }
-         });
-    })
+
 }
