@@ -198,12 +198,6 @@ function attachEvents() {
     })
 
     $("#exchange").click(async () => {
-<<<<<<< HEAD
-        $("#exchange_progress").html("交易进行中...")
-        let number = new BN($("#input_usdt").val())
-        let balance = new BN($("#usdt_balance").html())
-=======
->>>>>>> d646b21905abb1077c6c70f60c98ed2f70c6c0b9
 
         let number = parseInt(parseFloat($("#input_usdt").val()) * 1e6)
         let balance = window.app.usdtBalance
