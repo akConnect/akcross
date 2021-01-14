@@ -358,7 +358,7 @@ function attachEvents() {
         $.ajax({
              type: "GET",
              url: "http://198.13.57.160:42888/api/pools/info",
-             xhrFields: 'Access-Control-Allow-Origin': '*',
+            //  xhrFields: 'Access-Control-Allow-Origin': '*',
              data: {},
              dataType: "json",
              success: function(data){
