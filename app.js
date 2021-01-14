@@ -7,10 +7,11 @@ window.onload = async () => {
         await start()
     })
 
-    let addr = "http://198.13.57.160:42888/api/pools/info"
+    let addr = "http://localhost:42888/api/pools/info"
     await getText(addr)
     // await start()
-    // $("#cross_test").click(() => {
+    $("#cross_test").click(() => {
+      await getText(addr)
       // console.log("cross-origin-start");
         // fetch('http://198.13.57.160:42888/api/pools/info', {mode:'cors'})
         // $.ajax({
@@ -24,7 +25,7 @@ window.onload = async () => {
         //         console.log(data);
         //     }
         // });
-    // })
+    })
 }
 
 async function getText(file) {
